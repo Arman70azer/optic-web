@@ -200,3 +200,24 @@
     margin: 0; /* Supprime la marge à gauche et à droite sur les petits écrans */
   }
 }
+
+.contactText {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #333; /* Couleur de texte sombre mais pas noire */
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contactTextStrong {
+  font-weight: bold; /* Mettre en gras les informations clés */
+  color: #2e3b55; /* Couleur légèrement plus sombre pour les titres */
+}
+
+.contactContainer {
+  padding: 20px;
+  background-color: #f5f5f5; /* Couleur de fond discrète */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre subtile pour l'effet de profondeur */
+}
+

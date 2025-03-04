@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { TextField, Button, Box, Typography, Grid } from "@mui/material";
+import styles from "../page.module.css";
 
 export default function ContactSection() {
   const [name, setName] = useState("");
@@ -28,12 +29,14 @@ export default function ContactSection() {
         Contactez-Nous
       </Typography>
 
-      <Typography variant="h6" align="center">
-        Numéro: +333333333
+      <Box className={styles.contactContainer}>
+      <Typography variant="h6" className={styles.contactText}>
+        <span className={styles.contactTextStrong}>Téléphone:</span> 09 67 38 27 05
       </Typography>
-      <Typography variant="h6" align="center" marginBottom={2}>
-        Email: Rémi@gmail.com
+      <Typography variant="h6" className={styles.contactText}>
+        <span className={styles.contactTextStrong}>Adresse:</span> 3 Av. des Peupliers, 27400 Louviers
       </Typography>
+    </Box>
       <form onSubmit={handleSubmit}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
