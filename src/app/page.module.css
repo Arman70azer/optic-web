@@ -11,8 +11,9 @@
   align-items: center;
   justify-items: center;
   min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
+  overflow-y: auto;
+  background-color: #f7f7f7;
+  gap: 64px; /* Ajoute un espace entre les sections */
   font-family: var(--font-geist-sans);
 }
 
@@ -56,113 +57,143 @@
   font-weight: 600;
 }
 
-.ctas {
-  display: flex;
-  gap: 16px;
+
+.headerSectionFull_title {
+  position: fixed; /* Fixe l'élément en haut */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px; /* Ajuste l'espacement intérieur */
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  border-bottom: 2px solid #ddd;
+  display: flex; /* Met les éléments en ligne */
+  justify-content: space-between; /* Titre à gauche, liens à droite */
+  align-items: center; /* Centre verticalement */
 }
 
-.ctas a {
-  appearance: none;
-  border-radius: 128px;
-  height: 48px;
-  padding: 0 20px;
-  border: none;
-  border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
-  cursor: pointer;
+/* Style pour le conteneur des liens */
+.navLinks {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  gap: 20px; /* Espacement entre Services & Contact */
+  margin-left: 20px; /* Aligne les boutons à droite */
+}
+
+
+.navLinks button {
+  background-color: transparent;
+  border: 2px solid #747373; /* Bordure grise claire */
+  color: #505050; /* Gris moyen pour le texte */
+  padding: 10px 20px;
   font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-a.primary {
-  background: var(--foreground);
-  color: var(--background);
-  gap: 8px;
+.navLinks button:hover {
+  background-color: #3f3f3f; /* Gris foncé pour l'arrière-plan au survol */
+  color: white; /* Texte blanc au survol */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère au survol */
 }
 
-a.secondary {
-  border-color: var(--gray-alpha-200);
-  min-width: 180px;
+
+
+/* .title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.footer {
-  grid-row-start: 3;
-  display: flex;
-  gap: 24px;
+.contentSection {
+  margin-top: 100px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+} */
+
+/* styles/page.module.css */
+
+/* styles/page.module.css */
+
+.section_with_background {
+  position: relative;
+  background-image: url('/assets/1.jpg'); /* Vérifiez si l'URL de l'image est correcte */
+  background-size: cover; /* L'image couvre toute la section */
+  background-position: center; /* Centre l'image */
+  height: 100%; /* Hauteur de la section, ajustée à 50% de la fenêtre */
+  width: 100vw; /* Largeur de la section = 90% de la largeur de la fenêtre */
+  margin: 0 auto; /* Centre horizontalement */
+  display: flex; /* Active Flexbox */
+  align-items: center; /* Centre le contenu verticalement */
+  flex-direction: column; /* Aligne le contenu dans une colonne */
+  text-align: center; /* Centre le texte dans la section */
+  box-sizing: border-box; /* Empêche le débordement de la section */
+  overflow: hidden; /* Empêche tout débordement de contenu */
 }
 
-.footer a {
-  display: flex;
+.section_with_background::after {
+  content: ''; /* Crée un pseudo-élément pour l'overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1); /* Overlay gris semi-transparent */
+  pointer-events: none; /* Permet aux éléments sous l'overlay d'être interactifs */
+}
+
+.section_with_background .content {
+  position: relative; /* Pour que le texte soit au-dessus de l'overlay */
+  background-color: rgba(255, 255, 255, 0.9); /* Fond plus clair avec une transparence plus faible */
+  margin: 48px;
+  padding: 30px 40px; /* Espacement confortable autour du contenu */
+  border-radius: 8px; /* Coins arrondis pour un effet plus doux */
+  width: 80%; /* Ajuster la largeur pour que le texte soit bien centré */
+  max-width: 800px; /* Limiter la largeur */
+  box-sizing: border-box;
+  color: #555; /* Couleur du texte gris clair */
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Bordure fine et très discrète */
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); /* Ombre très subtile pour un effet léger */
+}
+
+.section_with_background h2 {
+  font-size: 32px; /* Taille du titre réduite pour un effet plus léger */
+  margin-bottom: 12px; /* Espacement plus réduit entre le titre et le texte */
+  font-weight: 600; /* Poids de la police légèrement plus léger pour un style moderne */
+  color: #333; /* Couleur sombre pour un contraste agréable */
+}
+
+.section_with_background p {
+  font-size: 16px; /* Taille de police plus petite pour une lecture plus fluide */
+  line-height: 1.6; /* Espacement de ligne pour améliorer la lisibilité */
+  color: #777; /* Couleur de texte gris clair */
+  margin-bottom: 16px; /* Espacement entre les paragraphes */
+}
+
+.section_with_background p:last-of-type {
+  margin-bottom: 0; /* Supprimer la marge après le dernier paragraphe */
+}
+
+
+/* Media Queries pour rendre la section responsive */
+@media (max-width: 768px) {
+  .section_with_background {
+    margin: 0; /* Supprime la marge à gauche et à droite sur les écrans plus petits */
+  }
+}
+
+@media (max-width: 480px) {
+  .section_with_background {
+    margin: 0; /* Supprime la marge à gauche et à droite sur les petits écrans */
+  }
+}
+
+.center{
   align-items: center;
-  gap: 8px;
-}
-
-.footer img {
-  flex-shrink: 0;
-}
-
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
-
-  .footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
-}
-
-@media (max-width: 600px) {
-  .page {
-    padding: 32px;
-    padding-bottom: 80px;
-  }
-
-  .main {
-    align-items: center;
-  }
-
-  .main ol {
-    text-align: center;
-  }
-
-  .ctas {
-    flex-direction: column;
-  }
-
-  .ctas a {
-    font-size: 14px;
-    height: 40px;
-    padding: 0 16px;
-  }
-
-  a.secondary {
-    min-width: auto;
-  }
-
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
+  display: flex;
+  align-content: center;
 }
