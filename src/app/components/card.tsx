@@ -19,6 +19,7 @@ export default function RemiCard() {
       justifyContent: 'center', // Centrer horizontalement
       alignItems: 'center', // Centrer verticalement
     }}>
+      
       <Card sx={{ minWidth: 320 }}>
         <CardMedia
           sx={{ minHeight: 244, position: 'relative' }}
@@ -39,7 +40,7 @@ export default function RemiCard() {
         </CardMedia>
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {"Remi"}
+            {"Rémi"}
           </Typography>
           <Typography variant="body2" sx={{ color: 'text.secondary' }}>
             {"Professionnel Optique"}

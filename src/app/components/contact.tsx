@@ -18,7 +18,6 @@ export default function ContactSection() {
     <Box
       sx={{
         padding: 5,
-        backgroundColor: "#f4f4f4",
         borderRadius: 2,
         width: '90%',
         margin: '0 auto',
