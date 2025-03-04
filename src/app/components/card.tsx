@@ -19,9 +19,9 @@ export default function RemiCard() {
       justifyContent: 'center', // Centrer horizontalement
       alignItems: 'center', // Centrer verticalement
     }}>
-      <Card sx={{ maxWidth: 420 }}>
+      <Card sx={{ minWidth: 320 }}>
         <CardMedia
-          sx={{ height: 244, position: 'relative' }}
+          sx={{ minHeight: 244, position: 'relative' }}
           image="https://coiffeur-coulonges.com/wp-content/uploads/2022/10/coiffures-homme-lunettes.jpg"
           title="Remi"
           onLoad={() => setLoading(false)} // Cela sera appelé après le chargement de l'image

@@ -83,8 +83,8 @@
 
 .navLinks button {
   background-color: transparent;
-  border: 2px solid #747373; /* Bordure grise claire */
-  color: #505050; /* Gris moyen pour le texte */
+  border: 2px solid #e2e2e2; /* Bordure grise claire */
+  color: #2c2c2c; /* Gris moyen pour le texte */
   padding: 10px 20px;
   font-size: 16px;
   border-radius: 5px;
@@ -93,9 +93,9 @@
 }
 
 .navLinks button:hover {
-  background-color: #3f3f3f; /* Gris foncé pour l'arrière-plan au survol */
-  color: white; /* Texte blanc au survol */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère au survol */
+  background-color: #e4e3e3; /* Gris foncé pour l'arrière-plan au survol */
+  color: #0e0e0e; /* Texte blanc au survol */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05); /* Ombre légère au survol */
 }
 
 
@@ -135,20 +135,22 @@
   overflow: hidden; /* Empêche tout débordement de contenu */
 }
 
-.section_with_background::after {
-  content: ''; /* Crée un pseudo-élément pour l'overlay */
+/* Ajout d'un voile gris transparent pour améliorer la lisibilité du texte */
+.section_with_background::before {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.1); /* Overlay gris semi-transparent */
-  pointer-events: none; /* Permet aux éléments sous l'overlay d'être interactifs */
+  background-color: rgba(0, 0, 0, 0.4); /* Voile gris avec transparence */
+  z-index: 1; /* S'assure que le voile est au-dessus de l'image mais en dessous du texte */
 }
+
 
 .section_with_background .content {
   position: relative; /* Pour que le texte soit au-dessus de l'overlay */
-  background-color: rgba(255, 255, 255, 0.9); /* Fond plus clair avec une transparence plus faible */
+  background-color: transparent; /* Suppression du fond */
   margin: 48px;
   padding: 30px 40px; /* Espacement confortable autour du contenu */
   border-radius: 8px; /* Coins arrondis pour un effet plus doux */
@@ -156,23 +158,30 @@
   max-width: 800px; /* Limiter la largeur */
   box-sizing: border-box;
   color: #555; /* Couleur du texte gris clair */
-  border: 1px solid rgba(0, 0, 0, 0.05); /* Bordure fine et très discrète */
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); /* Ombre très subtile pour un effet léger */
+  /* Suppression des bordures */
+  z-index: 2;
+  border: none;
+  box-shadow: none; /* Suppression de l'ombre */
 }
 
+
 .section_with_background h2 {
-  font-size: 32px; /* Taille du titre réduite pour un effet plus léger */
+  font-size: 40px; /* Taille du titre augmentée */
   margin-bottom: 12px; /* Espacement plus réduit entre le titre et le texte */
-  font-weight: 600; /* Poids de la police légèrement plus léger pour un style moderne */
-  color: #333; /* Couleur sombre pour un contraste agréable */
+  font-weight: 700; /* Épaississement du texte du titre */
+  color: #ffffff; /* Couleur sombre pour un contraste agréable */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ombre autour du texte pour l'épaissir */
 }
 
 .section_with_background p {
-  font-size: 16px; /* Taille de police plus petite pour une lecture plus fluide */
+  font-size: 18px; /* Taille de police augmentée pour le texte */
   line-height: 1.6; /* Espacement de ligne pour améliorer la lisibilité */
-  color: #777; /* Couleur de texte gris clair */
+  font-weight: 600; /* Épaississement du texte du paragraphe */
+  color: #e7e7e7; /* Couleur de texte gris clair */
   margin-bottom: 16px; /* Espacement entre les paragraphes */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Ombre autour du texte pour l'épaissir */
 }
+
 
 .section_with_background p:last-of-type {
   margin-bottom: 0; /* Supprimer la marge après le dernier paragraphe */
