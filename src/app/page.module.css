@@ -98,13 +98,13 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05); /* Ombre légère au survol */
 }
 
-
-
-/* .title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
+.title {
+  cursor: pointer;
+  /* Vous pouvez également ajouter d'autres styles ici si nécessaire */
 }
+
+
+/* 
 
 .contentSection {
   margin-top: 100px;
@@ -199,10 +199,4 @@
   .section_with_background {
     margin: 0; /* Supprime la marge à gauche et à droite sur les petits écrans */
   }
-}
-
-.center{
-  align-items: center;
-  display: flex;
-  align-content: center;
 }

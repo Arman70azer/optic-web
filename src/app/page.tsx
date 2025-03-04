@@ -20,7 +20,7 @@ export default function Home() {
     <div className={styles.page}>
       <main className={styles.main}>
         <section className={styles.headerSectionFull_title}>
-          <h1 className={styles.title}>Optic House</h1>
+          <h1 className={styles.title} onClick={()=>handleScroll('start')}>Optic House</h1>
           <div className={styles.navLinks}>
             {/* Utilisation du gestionnaire de clics avec décalage */}
             <button onClick={() => handleScroll('services')}>Services</button>
@@ -28,7 +28,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={styles.section_with_background}>
+        <section className={styles.section_with_background} id="start">
           <div className={styles.content}>
             <h2>Qu'est-ce qu'Optic House ?</h2>
             <p>
