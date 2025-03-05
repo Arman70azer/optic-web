@@ -1,6 +1,6 @@
 "use client";
 import styles from "./page.module.css";
-import RemiCard from "./components/card";
+// import RemiCard from "./components/card";
 import TabsServices from "./components/tabs";
 import Contact from "./components/contact";
 import MapW from "./components/map";
@@ -25,7 +25,6 @@ export default function Home() {
           <div className={styles.navLinks}>
             {/* Utilisation du gestionnaire de clics avec décalage */}
             <button onClick={() => handleScroll('services')}>Services</button>
-            <button onClick={() => handleScroll('carte')}>Carte</button>
             <button onClick={() => handleScroll('contact')}>Contact</button>
           </div>
         </section>
@@ -55,12 +54,12 @@ export default function Home() {
           </div>
 
           {/* Card du fondateur */}
-          <div className={styles.card}>
+          {/* <div className={styles.card}>
           <div className={styles.fondateur}>
             Fondateur:
           </div>
             <RemiCard />
-          </div>
+          </div> */}
         </div>
 
 
