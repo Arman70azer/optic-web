@@ -31,14 +31,9 @@ export default function Home() {
 
         <section className={styles.section_with_background} id="start">
           <div className={styles.content}>
-            <h2>Qu'est-ce qu'Optic House ?</h2>
+            <h2>Optic House</h2>
             <p>
-              Optic House est un établissement de santé spécialisé dans la fabrication, la vente et l'adaptation de lunettes, 
-              de lentilles de contact et d'autres dispositifs optiques. Nous conseillons nos patients sur le choix 
-              des corrections visuelles en fonction de leurs besoins, réalisons des examens de la vue de base et assurons 
-              un suivi attentif de l'ajustement des lunettes ou des lentilles. Notre équipe offre un service rapide, 
-              efficace et courtois pour garantir la satisfaction de chaque patient. Nous travaillons en étroite 
-              collaboration avec les ophtalmologues pour offrir des solutions adaptées à la correction de la vision.
+              "Le meilleur de l'optique"
             </p>
           </div>
         </section>

@@ -121,14 +121,15 @@
 
 .section_with_background {
   position: relative;
-  background-image: url('/assets/1.jpg'); /* Vérifiez si l'URL de l'image est correcte */
+  background-image: url('/assets/shop.jpg'); /* Vérifiez si l'URL de l'image est correcte */
   background-size: cover; /* L'image couvre toute la section */
   background-position: center; /* Centre l'image */
-  height: 100%; /* Hauteur de la section, ajustée à 50% de la fenêtre */
+  height: 100vh; /* Hauteur de la section, ajustée à 50% de la fenêtre */
   width: 100vw; /* Largeur de la section = 90% de la largeur de la fenêtre */
   margin: 0 auto; /* Centre horizontalement */
-  display: flex; /* Active Flexbox */
-  align-items: center; /* Centre le contenu verticalement */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column; /* Aligne le contenu dans une colonne */
   text-align: center; /* Centre le texte dans la section */
   box-sizing: border-box; /* Empêche le débordement de la section */
@@ -166,21 +167,22 @@
 
 
 .section_with_background h2 {
-  font-size: 40px; /* Taille du titre augmentée */
-  margin-bottom: 12px; /* Espacement plus réduit entre le titre et le texte */
-  font-weight: 700; /* Épaississement du texte du titre */
-  color: #ffffff; /* Couleur sombre pour un contraste agréable */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ombre autour du texte pour l'épaissir */
+  font-size: calc(9vw + 1.8vh); /* Utilisation de calc() pour combiner la largeur et la hauteur */
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .section_with_background p {
-  font-size: 18px; /* Taille de police augmentée pour le texte */
-  line-height: 1.6; /* Espacement de ligne pour améliorer la lisibilité */
-  font-weight: 600; /* Épaississement du texte du paragraphe */
-  color: #e7e7e7; /* Couleur de texte gris clair */
-  margin-bottom: 16px; /* Espacement entre les paragraphes */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Ombre autour du texte pour l'épaissir */
+  font-size: calc(1vw + 0.5vh); /* Taille réactive pour le texte du paragraphe */
+  line-height: 1.6;
+  font-weight: 600;
+  color: #e7e7e7;
+  margin-bottom: 16px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
+
 
 
 .section_with_background p:last-of-type {
