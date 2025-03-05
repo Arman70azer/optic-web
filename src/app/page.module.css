@@ -201,6 +201,15 @@
   }
 }
 
+.fondateur{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #333; /* Couleur de texte sombre mais pas noire */
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
 .contactText {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
@@ -215,9 +224,37 @@
 }
 
 .contactContainer {
-  padding: 20px;
-  background-color: #f5f5f5; /* Couleur de fond discrète */
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre subtile pour l'effet de profondeur */
+  margin-bottom: 36px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Dispose les éléments en colonne */
+  align-items: center; /* Aligne les éléments au centre horizontalement */
+  justify-content: center; /* Centre les éléments verticalement */
+  gap: 20px; /* Ajuste l'écart entre les éléments */
+}
+
+/* Style pour rendre la carte responsive */
+.map_container {
+  width: 80vh; /* Largeur pleine */
+  height: 400px; /* Hauteur par défaut (modifiable en fonction de l'écran) */
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+/* Ajustement pour les petits écrans (mobile) */
+@media (max-width: 768px) {
+  .map_container {
+    height: 300px; /* Réduit la hauteur pour les petits écrans */
+    width: 50vh;
+  }
+}
+
+/* Ajustement pour les écrans très larges (comme les grands écrans de bureau) */
+@media (min-width: 1200px) {
+  .map_container {
+    height: 500px; /* Hauteur plus grande pour les grands écrans */
+  }
 }
 

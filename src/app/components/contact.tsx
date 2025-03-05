@@ -25,18 +25,15 @@ export default function ContactSection() {
         boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.16)', // Ombre légère autour du formulaire
       }}
     >
-      <Typography variant="h4" align="center" gutterBottom>
-        Contactez-Nous
-      </Typography>
 
       <Box className={styles.contactContainer}>
-      <Typography variant="h6" className={styles.contactText}>
-        <span className={styles.contactTextStrong}>Téléphone:</span> 09 67 38 27 05
-      </Typography>
-      <Typography variant="h6" className={styles.contactText}>
-        <span className={styles.contactTextStrong}>Adresse:</span> 3 Av. des Peupliers, 27400 Louviers
-      </Typography>
-    </Box>
+        <Typography variant="h6" className={styles.contactText}>
+          <span className={styles.contactTextStrong}>Téléphone:</span> 09 67 38 27 05
+        </Typography>
+        <Typography variant="h6" className={styles.contactText}>
+          <span className={styles.contactTextStrong}>Adresse:</span> 3 Av. des Peupliers, 27400 Louviers
+        </Typography>
+      </Box>
       <form onSubmit={handleSubmit}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
