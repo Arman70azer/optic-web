@@ -5,8 +5,16 @@ import TabsServices from "./components/tabs";
 import Contact from "./components/contact";
 import MapW from "./components/map";
 import BlocImage from "./components/block";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setIsVisible(true), 200); // Délai avant l'animation
+  }, []);
+
 
   const handleScroll = (id: string) => {
     const element = document.getElementById(id);
@@ -31,7 +39,7 @@ export default function Home() {
         </section>
 
         <section className={styles.section_with_background} id="start">
-          <div className={styles.content}>
+          <div className={`${styles.content} ${isVisible ? styles.show : ""}`}>
             <h2>Optic House</h2>
             <p>
               "Le meilleur de l'optique"
