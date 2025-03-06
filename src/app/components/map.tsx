@@ -15,13 +15,13 @@ function MapW() {
     <div className="min-h-screen bg-gray-100 p-8">
       <div className="max-w-4xl mx-auto">
         <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-          {/* Titre de la section */}
-          <h1 className="text-2xl font-bold text-gray-800 mb-4">Notre position</h1>
+   
+          {/* <h1 className="text-2xl font-bold text-gray-800 mb-4">Notre position</h1> */}
           
           {/* Description */}
-          <p className="text-gray-600 mb-6">
+          {/* <p className="text-gray-600 mb-6">
             Retrouvez nous sur Louviers à l'adresse: 3 Av. des Peupliers, 27400
-          </p>
+          </p> */}
 
           {/* Map */}
           <div className="flex justify-center">

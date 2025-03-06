@@ -237,26 +237,68 @@
   gap: 20px; /* Ajuste l'écart entre les éléments */
 }
 
-/* Style pour rendre la carte responsive */
 .map_container {
-  width: 80vh; /* Largeur pleine */
-  height: 400px; /* Hauteur par défaut (modifiable en fonction de l'écran) */
+  width: 80vw; /* Utilisation de vw pour s'adapter à la largeur de l'écran */
+  max-width: 70vw; /* Empêche la carte d'être trop large */
+  height: 600px;
   border-radius: 10px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto; /* Centre horizontalement */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Ajustement pour les petits écrans (mobile) */
 @media (max-width: 768px) {
   .map_container {
-    height: 300px; /* Réduit la hauteur pour les petits écrans */
-    width: 50vh;
+    width: 90vw; /* Augmente la largeur pour mieux remplir l'écran */
+    height: 300px;
   }
 }
 
-/* Ajustement pour les écrans très larges (comme les grands écrans de bureau) */
+/* Ajustement pour les écrans très larges */
 @media (min-width: 1200px) {
   .map_container {
-    height: 500px; /* Hauteur plus grande pour les grands écrans */
+    height: 600px;
   }
 }
 
+
+.container_images {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* Système de grille */
+  gap: 8px; /* Espacement entre les images */
+  width: 100vw;
+  margin-top: 36px;
+  margin-bottom: 46px;
+  padding: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+.image1, .image2, .image3, .image4 {
+  width: 100%;
+  height: 280px; /* Ajuste la hauteur comme nécessaire */
+  background-size: cover;
+  background-position: center;
+
+}
+
+.image1 {
+  background-image: url("/assets/model4.jpg");
+  grid-column: span 8;
+}
+
+.image2 {
+  background-image: url("/assets/model_photo.jpg");
+  grid-column: span 4;
+}
+
+.image3 {
+  background-image: url("/assets/model5.jpg");
+  grid-column: span 4;
+}
+
+.image4 {
+  background-image: url("/assets/model3.jpg");
+  grid-column: span 8;
+}

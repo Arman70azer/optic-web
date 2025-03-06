@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import TabsServices from "./components/tabs";
 import Contact from "./components/contact";
 import MapW from "./components/map";
+import BlocImage from "./components/block";
 
 export default function Home() {
 
@@ -41,10 +42,12 @@ export default function Home() {
         <div id="services"></div>
         <TabsServices />
 
+        <BlocImage/>
+
         <div className={styles.container} id="carte">
 
            {/* Mini-Map */}
-           <div className={styles.map}>
+          <div className={styles.map}>
             <MapW />
           </div>
 
@@ -56,8 +59,6 @@ export default function Home() {
             <RemiCard />
           </div> */}
         </div>
-
-
 
         <section id="contact">
           <Contact />

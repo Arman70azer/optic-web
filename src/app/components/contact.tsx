@@ -47,9 +47,8 @@ export default function ContactSection() {
       sx={{
         padding: 5,
         borderRadius: 2,
-        width: "90%",
+        width: "80%",
         margin: "0 auto",
-        boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
       }}
     >
       <Box className={styles.contactContainer}>
@@ -97,18 +96,19 @@ export default function ContactSection() {
             />
           </Grid>
           <Grid item xs={12}>
-            <Button
-              variant="contained"
-              sx={{
-                backgroundColor: "#90AEC5",
-                color: "white",
-                "&:hover": { backgroundColor: "#7B99B0" },
-              }}
-              type="submit"
-              fullWidth
-            >
-              Envoyer
-            </Button>
+          <Button
+            variant="contained"
+            sx={{
+              backgroundColor: "#6FA8DC", // Bleu plus clair et vif
+              color: "white",
+              "&:hover": { backgroundColor: "#5A92C4" }, // Bleu légèrement plus foncé au survol
+            }}
+            type="submit"
+            fullWidth
+          >
+            Envoyer
+          </Button>
+
           </Grid>
         </Grid>
       </form>
